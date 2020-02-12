@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'curso-angular-feb12';
+  nombreDeBoton = "haz click";
+  valorDeInput = "Hola!";
+
+  cambiarTitulo(): void {
+    this.title = "Otro titulo";
+    this.nombreDeBoton = "click realizado";
+    this.valorDeInput = "Nuevo valor";
+  }
+
+  imprimirEnConsola(): void {
+    console.log(this.valorDeInput);
+  }
 }

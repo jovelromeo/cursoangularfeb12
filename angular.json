@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "curso-angular-feb12": {
+    "Angular-Project": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,17 +13,18 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/curso-angular-feb12",
+            "outputPath": "dist/Angular-Project",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
-            "aot": false,
+            "aot": true,
             "assets": [
               "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -41,7 +42,6 @@
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
-              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
@@ -63,18 +63,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "curso-angular-feb12:build"
+            "browserTarget": "Angular-Project:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "curso-angular-feb12:build:production"
+              "browserTarget": "Angular-Project:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "curso-angular-feb12:build"
+            "browserTarget": "Angular-Project:build"
           }
         },
         "test": {
@@ -89,6 +89,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -111,15 +112,19 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "curso-angular-feb12:serve"
+            "devServerTarget": "Angular-Project:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "curso-angular-feb12:serve:production"
+              "devServerTarget": "Angular-Project:serve:production"
             }
           }
         }
       }
-    }},
-  "defaultProject": "curso-angular-feb12"
+    }
+  },
+  "defaultProject": "Angular-Project",
+  "cli": {
+    "analytics": false
+  }
 }

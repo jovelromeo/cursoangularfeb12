@@ -1,15 +1,15 @@
-export interface Usuario {
+export interface User {
     id: number,
     name: string,
     username: string,
     email: string,
-    address: Adress,
+    address: Address
     phone: string,
     website: string,
     company: Company
 }
 
-export interface Adress {
+export interface Address {
     street: string,
     suite: string,
     city: string,

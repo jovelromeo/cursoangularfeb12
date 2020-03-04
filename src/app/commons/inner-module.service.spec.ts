@@ -3,10 +3,14 @@ import { TestBed } from '@angular/core/testing';
 import { InnerModuleService } from './inner-module.service';
 
 describe('InnerModuleService', () => {
-  beforeEach(() => TestBed.configureTestingModule({}));
+  let service: InnerModuleService;
+
+  beforeEach(() => {
+    TestBed.configureTestingModule({});
+    service = TestBed.inject(InnerModuleService);
+  });
 
   it('should be created', () => {
-    const service: InnerModuleService = TestBed.get(InnerModuleService);
     expect(service).toBeTruthy();
   });
 });
